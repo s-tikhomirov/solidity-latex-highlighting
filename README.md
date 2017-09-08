@@ -1,23 +1,20 @@
-Solidity is a new language used for programming smart contracts on the [Ethereum](https://ethereum.org/) platform.
-This repo defines **Solidity syntax highlighting** for LaTeX based on `listings` and `xcolor` packages.
-Solidity syntax highlighting is useful for researchers who include Solidity source code examples in their papers.
-Highlighting helps readers grasp the key concepts with less struggling with unfamiliar syntax.
+Solidity is a major programming language for [Ethereum](https://ethereum.org/) smart contracts.
+**Solidity LaTeX highlighting** helps researchers include readable code examples in their papers.
+Compared to [some](https://github.com/dccp/bachelor-thesis-report/blob/0852ba922aefa71d9c943cbff363f40685345fe3/include/settings/Settings.tex) [other](https://github.com/adrianwersching/ustutt-fachstudie-dapps/blob/6673825f916c5a98462c8291b1814f7ed0e23417/ausarbeitung/ausarbeitung.tex) [previous](https://github.com/dybber/blockchain-summerschool-2016/blob/440259e1c41f1efa175a0e782e5420a732cd0008/tex/master.tex) [attempts](https://github.com/DCReum/dcreum.github.io/blob/724c00d20801cefd977c26e475ddac08e33763a8/docs/report.tex), this highlighter fully supports the [Solidity syntax](https://solidity.readthedocs.io/) (if you think this is not the case, feel free to submit an issue or a pull request).
 
 # Usage
-
-## Tex source code
 
 ```
 \documentclass{article}
 
-\input{solidity-highlighting.tex}
+\input{solidity-highlighting.tex}	% copy the file from this repo
 
 \begin{lstlisting}[language=Solidity]
 pragma solidity 0.4.16;
 
 contract TestContract {
     
-	string private myString;
+	string private myString = "foo";
 	
 	function getString() constant returns (string) {
 	    return myString;
