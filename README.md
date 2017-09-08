@@ -28,6 +28,7 @@ contract TestContract {
 }
 \end{lstlisting}
 ```
+
 ## Result
 
-![](solidity-latex-highlighting/example.png)
+![](example.png)
