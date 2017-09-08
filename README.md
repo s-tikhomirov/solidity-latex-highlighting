@@ -4,6 +4,8 @@ Compared to [some](https://github.com/dccp/bachelor-thesis-report/blob/0852ba922
 
 # Usage
 
+## Source
+
 ```
 \documentclass{article}
 
@@ -26,3 +28,6 @@ contract TestContract {
 }
 \end{lstlisting}
 ```
+## Result
+
+![](solidity-latex-highlighting/example.png)
