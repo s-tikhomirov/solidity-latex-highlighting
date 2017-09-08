@@ -1,0 +1,38 @@
+\usepackage{listings, xcolor}
+
+\definecolor{lightgray}{rgb}{.96,.96,.96}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+%\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{Solidity}{
+	keywords=[1]{assert, block, call, callcode, constant, delegatecall, do, else, external, false, function, if, import, internal, is, memory, msg, new, now, payable, private, public, return, returns, revert, send, storage, this, throw, true, value, var, while},
+	keywordstyle=[1]\color{blue}\bfseries,
+	keywords=[2]{address, bool, byte, bytes, enum, int, int8, int16, int32, int64, int128, int256, mapping, string, uint, uint8, uint16, uint32, uint64, uint128, uint256},
+	keywordstyle=[2]\color{teal}\bfseries,
+	keywords=[3]{balance, blockhash, gas, length, sender, timestamp, transfer, value},	
+	keywordstyle=[3]\color{violet}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{darkgray}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstset{
+	language=Solidity,
+	backgroundcolor=\color{lightgray},
+	extendedchars=true,
+	basicstyle=\footnotesize\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\footnotesize,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b
+}

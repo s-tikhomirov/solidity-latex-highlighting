@@ -1,0 +1,37 @@
+\documentclass{article}
+
+\usepackage{filecontents, pgffor}
+
+\input{solidity-highlighting.tex}
+
+\title{Solidity highlighting in LaTeX documents}
+\author{Sergei~Tikhomirov \\ \texttt{sergey.s.tikhomirov@gmail.com}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+This \LaTeX includes test source code files to test syntax highlighting for the Solidity programming language.
+Solidity is a new language used for programming smart contracts on the Ethereum platform.
+The \texttt{solidity-highlighting.tex} file defines the highlighting scheme using \texttt{listings} and \texttt{xcolor} packages.
+Solidity syntax highlighting may be useful for researchers and developers who include Solidity source code examples in their papers.
+Highlighting helps readers grasp the key concepts with less struggling with unfamiliar syntax.
+
+%\pagebreak
+
+\section{Examples}
+
+\edef\ExamplesDir{examples}
+
+\foreach \i in {00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 10} {
+	\edef\ExampleFile{\ExamplesDir/example\i.sol}
+	\IfFileExists{\ExampleFile}{
+		\subsection{Example \i}
+		\input{\ExampleFile}
+	}
+}
+
+\end{document}
