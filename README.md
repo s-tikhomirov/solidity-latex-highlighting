@@ -11,7 +11,27 @@ Compared to [some](https://github.com/dccp/bachelor-thesis-report/blob/0852ba922
 ```latex
 \documentclass{article}
 
-\input{solidity-highlighting.tex}	% copy the file from this repo
+\usepackage{listings}
+\usepackage{listings-solidity} % copy listings-solidity.sty to your project
+
+\usepackage{xcolor}
+\definecolor{verylightgray}{rgb}{.97,.97,.97}
+
+\lstset{ % define general preferences
+	language=Solidity,
+	backgroundcolor=\color{verylightgray},
+	extendedchars=true,
+	basicstyle=\footnotesize\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\footnotesize,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b
+}
 
 \begin{lstlisting}[language=Solidity]
 pragma solidity 0.4.16;
